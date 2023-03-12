@@ -1,0 +1,15 @@
+{
+    "rest-client.environmentVariables": {
+        "$shared": {
+            "apiVersion": "v1",
+            "budgetId": "last-used",
+            "apiUrl": "https://api.youneedabudget.com",
+        }
+    },
+    "rest-client.defaultHeaders": {
+        "User-Agent": "vscode-restclient",
+    },
+    "rest-client.previewOption": "body",
+    "rest-client.previewResponseInUntitledDocument": true,
+    "rest-client.previewResponsePanelTakeFocus": false,
+}
