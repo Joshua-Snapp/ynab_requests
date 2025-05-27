@@ -1,26 +1,21 @@
 # https://api.youneedabudget.com/
 # https://api.youneedabudget.com/v1
-@url = {{apiUrl}}/{{apiVersion}}
-@budgetUrl = {{url}}/budgets/{{budgetId}}
 
 
-###
+### user id
 # Returns authenticated user information
-GET {{url}}/user
-Authorization: Bearer {{$dotenv token}}
+GET /user
 
 ###
 # Returns all categories grouped by category group. Amounts (budgeted, activity, balance, etc.) are specific to the current budget month (UTC).
-GET {{budgetUrl}}/categories
-Authorization: Bearer {{$dotenv token}}
+GET /budgets/last-used/categories
 
-###
+
+### single budget month
 # Returns a single budget month
-GET {{budgetUrl}}/months/2023-03-01
-Authorization: Bearer {{$dotenv token}}
+GET /budgets/last-used/months/2023-05-01
 
 ###
 # Returns all budget months
-GET {{budgetUrl}}/months
-Authorization: Bearer {{$dotenv token}}
+GET /budgets/last-used/months
 

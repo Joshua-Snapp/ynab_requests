@@ -1,15 +1,14 @@
 {
-    "rest-client.environmentVariables": {
+    "httpyac.environmentVariables": {
         "$shared": {
-            "apiVersion": "v1",
-            "budgetId": "last-used",
-            "apiUrl": "https://api.youneedabudget.com",
+            "host": "https://api.youneedabudget.com/v1"
         }
     },
-    "rest-client.defaultHeaders": {
+    "httpyac.requestDefaultHeaders": {
         "User-Agent": "vscode-restclient",
+        "Authorization": "Bearer {{token}}"
     },
-    "rest-client.previewOption": "body",
-    "rest-client.previewResponseInUntitledDocument": true,
-    "rest-client.previewResponsePanelTakeFocus": false,
+    "httpyac.responseViewPreserveFocus": false,
+    "httpyac.responseViewContent": "body",
+    "httpyac.responseViewMode": "open"
 }
